@@ -1,0 +1,46 @@
+---
+layout: default
+paginate_path: "/page:num/"
+---
+<div class="home">
+  {{ content }}
+
+  <!-- LAST POST -->
+  <div class="noticia">
+      <span class="post-meta"> {{ site.posts.first.date | date_to_long_string }}</span>
+      <a href="{{ site.posts.first.url | prepend: site.baseurl }}" style="color:#505050;text-decoration:none">
+        <h4>{{ site.posts.first.title }}</h4>
+      </a>
+      <p class="card-text text-justify">{% if site.posts.first.description %}{{ site.posts.first.description }}{% else %}{{ site.posts.first.excerpt | strip_html }}{% endif %}</p>
+      {% assign categories = site.posts.first.categories %}
+      {% for category in categories %}
+        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+      <p class="text-right"><a href="{{ site.posts.first.url | prepend: site.baseurl }}"> continue lendo...</a></p>
+    
+      <hr>
+    <!-- MOST RECENTLY -->
+    <div class=" container">
+      {% for post in site.posts %}
+        {% if post == site.posts.first %} {% continue %} {% endif %}
+        <div class="noticia">
+          <span class="post-meta"> {{ post.date | date_to_long_string }}</span>
+          <a href="{{ post.url | prepend: site.baseurl }}" style="color:#505050;text-decoration:none">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <p class="card-text text-justify">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+          {% assign categories = post.categories %}
+          {% for category in categories %}
+            <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+          {% endfor %}
+          <p class="text-right"><a href="{{ post.url | prepend: site.baseurl }}"> continue lendo...</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <a href="/blog"><H1>old news</H1></a>
+  
+</div>

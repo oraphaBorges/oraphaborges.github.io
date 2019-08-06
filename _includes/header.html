@@ -1,0 +1,17 @@
+<div id="menu">{% include menu.html %}</div>
+{% if page.dir == '/' %}
+    <section class="banner-home">
+        <div>
+            <img src="" alt="perfil" width="50px" height="50px">
+        </div>
+        <h1>Olá Seja Bem-vindo!</h1>
+        <h5>Meu nome é Raphael Borges. Sou desenvolvedor fullstack e Ciêntista. </h5>
+        <div>
+            <div><a href="http://www.github.com/oraphaborges">github</a></div>
+            <div><a href="http://www.kaggle.com/oraphaborges">kaggle</a></div>
+        </div>
+{% else %}
+    <section class="banner-pages">
+        <h1>{{page.title}}</h1>
+{% endif %}
+    </section>

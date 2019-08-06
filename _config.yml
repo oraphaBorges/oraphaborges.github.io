@@ -1,0 +1,27 @@
+title: O Rapha Borges
+email: oborgesrapha@gmail.com
+description: >- 
+  Apenas um jovem ciêntista à procura de respostas para as mais diversas questões.
+baseurl: ""
+url: "" 
+twitter_username: oraphaborges
+github_username:  oraphaborges
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+paginate: 5
+paginate_path: /blog/page:num/
+
+navigation:
+ - title: Home
+   url: /
+ - title: Sobre
+   url: /sobre
+ - title: Contato
+   url: /contato
+ - title: Categorias
+   url: /categorias
+
