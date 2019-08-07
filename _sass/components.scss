@@ -1,0 +1,42 @@
+html{
+    font-family: "Karla",sans-serif;
+}
+
+.bg-dark{
+    background-color: $dark;
+    color: $light;
+}
+.bg-light{
+    background-color: $light;
+    color: $dark;
+}
+.bg-white{
+    background-color: #fff;
+    color: $dark;
+}
+
+.container{
+    padding: 20px 60px;;
+}
+.content{
+    min-height: 100%;
+}
+
+.perfil {
+    width: 138px;
+    height: 138px;
+    background-image: url('../img/perfil.jpg');
+    border-radius: 100%;
+    margin: 40px;
+    box-shadow: 
+      0px 0px 0px 4px $main-color,
+      0px 0px 2px 14px transparentize($main-color, 0.7),
+      0px 0px 1px 23px transparentize($main-color, 0.8),
+  }
+
+h1{font-size: 36px;}
+h2{font-size: 24px;}
+h3{font-size: 16px;}
+h4{font-size: 14px;}
+h5{font-size: 12px;}
+ 

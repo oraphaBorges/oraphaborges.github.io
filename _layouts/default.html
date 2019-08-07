@@ -4,17 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
   <body>
-
-      <div id="header">{% include header.html %}</div>
-
-      <div class="container" id="content">{{ content }}</div>
-
-      <div class="container" id="footer">{% include footer.html %}</div>
-
-    </body>
+    <header>{% include header.html %}</header>
+    <article class="container content">{{ content }}</article>
+    <footer>{% include footer.html %}</footer>
+  </body>
 </html>
