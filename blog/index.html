@@ -3,36 +3,94 @@ title : Blog
 layout: page
 paginate_path: "/blog/page:num/"
 ---
-
+<article >
 <!-- post list -->
-{% for post in paginator.posts %}
-<li><a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a></li>
-{% endfor %}
-
-
-<!-- pagination -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="webjeda">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
+<!-- MOST RECENTLY -->
+<div class="container mt-2">
+  <p>Aqui você encontra todos os artigos existentes neste site.</p>
+  <h4 class="post-info"> ARTIgos</h4>
+  <div class="post-line"></div>
 </div>
-{% endif %}
+{% for post in paginator.posts %}
+<div class="other-post container mx-5">
+  
+  <div>
+
+    
+    <div class="posts mb-3">
+      <div class="mx-4">
+        <!-- post img -->
+        {% if post.image != none %}
+        <div> <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
+          <img class="post-image" src="{{site.baseurl}}/assets/img/posts/{{post.image}}" alt="post-image">
+        </div></a>
+        {% endif %}
+      </div>
+      
+      <div>
+          <!-- author and date -->
+          <div class="post-meta"> 
+            <span class="post-author">{{ post.author }}</span>
+            <span class="post-date"> / {{ post.date | date_to_long_string }}</span>
+          </div>
+          
+        <!-- title -->
+        <div class="my-2">
+          <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+        
+            <!-- text -->
+            <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+            
+            <!-- categories -->
+            <div class="mt-1 mb-2">
+              {% assign categories = post.categories %}
+              {% for category in categories %}
+              <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+              {% unless forloop.last %}&nbsp;{% endunless %}
+              {% endfor %}
+            </div>
+            
+            <!-- continue to read
+            <div><a href="{{ post.url | prepend: site.baseurl }}"> <button class="btn btn-primary">Continue Lendo</button> </a></div> -->
+          
+          </div>
+
+      </div>
+    </div>
+    <hr class="m-5">
+  </div>
+
+{% endfor %}
+<div class="mb-5 text-center post-info">
+
+
+  <!-- pagination -->
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; anterior</a>
+    {% else %}
+      <span>&laquo; anterior</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="webjeda">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="/">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">próxima &raquo;</a>
+    {% else %}
+      <span>próxima &raquo;</span>
+    {% endif %}
+  </div>
+  {% endif %}
+  </div>
+
+</article>

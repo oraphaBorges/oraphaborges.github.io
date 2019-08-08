@@ -13,7 +13,11 @@
         </div>
     </section>
     {% else %}
-        <h1>{{page.title}}</h1>
+        {% if page.layout != 'post' %}
+            <div class="text-center post-info m-2">
+                <h1>{{page.title}}</h1>
+            </div>
+        {% endif %}
     {% endif %}
     <hr class="m-0 p-0">
 </header>
