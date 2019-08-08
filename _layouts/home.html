@@ -2,45 +2,107 @@
 layout: default
 paginate_path: "/page:num/"
 ---
-<div class="home">
+<div class="home ">
   {{ content }}
 
   <!-- LAST POST -->
-  <div class="noticia">
-      <span class="post-meta"> {{ site.posts.first.date | date_to_long_string }}</span>
-      <a href="{{ site.posts.first.url | prepend: site.baseurl }}" style="color:#505050;text-decoration:none">
-        <h4>{{ site.posts.first.title }}</h4>
-      </a>
-      <p class="card-text text-justify">{% if site.posts.first.description %}{{ site.posts.first.description }}{% else %}{{ site.posts.first.excerpt | strip_html }}{% endif %}</p>
-      {% assign categories = site.posts.first.categories %}
-      {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-      <p class="text-right"><a href="{{ site.posts.first.url | prepend: site.baseurl }}"> continue lendo...</a></p>
+  {% assign last_post = site.posts.first %}
+  <div class="last-post container">
+      <!-- author and date -->      
+      <div class="post-meta m-2"> 
+        <span class="post-author">{{ last_post.author }}</span>
+        <span class="post-date"> / {{ last_post.date | date_to_long_string }}</span>
+      </div>
+      <!-- title -->
+      <div class="my-2">
+        <a class="post-title" href="{{ last_post.url | prepend: site.baseurl }}">{{ last_post.title }}</a>
+      </div>
+      <!-- post img -->
+      {% if last_post.image != none %}
+      <div> <a class="post-title" href="{{ last_post.url | prepend: site.baseurl }}">
+        <img class="post-image" src="{{site.baseurl}}/assets/img/posts/{{last_post.image}}" alt="post-image">
+      </div></a>
+      {% endif %}
+      <!-- text -->
+      <p class="mx-4">{% if last_post.description %}{{ last_post.description }}{% else %}{{ last_post.excerpt | strip_html }}{% endif %}</p>
+      <!-- categories -->
+      <div class="mt-1 mb-2">
+        {% assign categories = last_post.categories %}
+        {% for category in categories %}
+          <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+          {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+      </div>
+      <!-- continue to read -->
+      <div><a href="{{ last_post.url | prepend: site.baseurl }}"> <button class="btn btn-primary">Continue Lendo</button> </a></div>
     
-      <hr>
-    <!-- MOST RECENTLY -->
-    <div class=" container">
-      {% for post in site.posts %}
-        {% if post == site.posts.first %} {% continue %} {% endif %}
-        <div class="noticia">
-          <span class="post-meta"> {{ post.date | date_to_long_string }}</span>
-          <a href="{{ post.url | prepend: site.baseurl }}" style="color:#505050;text-decoration:none">
-            <h4>{{ post.title }}</h4>
-          </a>
-          <p class="card-text text-justify">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
-          {% assign categories = post.categories %}
-          {% for category in categories %}
-            <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
-            {% unless forloop.last %}&nbsp;{% endunless %}
-          {% endfor %}
-          <p class="text-right"><a href="{{ post.url | prepend: site.baseurl }}"> continue lendo...</a></p>
-        </div>
-      {% endfor %}
-    </div>
   </div>
 
-  <a href="/blog"><H1>old news</H1></a>
+  <hr class="my-5">
+
+  <div class="other-post container mx-5">
+    <h4 class="post-info">útilmos ARTIgos</h4>
+    <div class="post-line"></div>
+    
+    <!-- MOST RECENTLY -->
+    <div>
+      {% for post in site.posts %}
+      {% if post == last_post %} {% continue %} {% endif %}
+      <div class="posts mb-3">
+        <div class="mx-4">
+          <!-- post img -->
+          {% if post.image != none %}
+          <div> <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
+            <img class="post-image" src="{{site.baseurl}}/assets/img/posts/{{post.image}}" alt="post-image">
+          </div></a>
+          {% endif %}
+        </div>
+          
+        <div>
+          <!-- author and date -->
+          <div class="post-meta m-2"> 
+            <span class="post-author">{{ post.author }}</span>
+            <span class="post-date"> / {{ post.date | date_to_long_string }}</span>
+          </div>
+          
+          <!-- title -->
+          <div class="my-2">
+            <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </div>
+    
+            
+            <!-- text -->
+            <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+            
+            <!-- categories -->
+            <div class="mt-1 mb-2">
+              {% assign categories = post.categories %}
+              {% for category in categories %}
+              <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+              {% unless forloop.last %}&nbsp;{% endunless %}
+              {% endfor %}
+            </div>
+            
+            <!-- continue to read
+            <div><a href="{{ post.url | prepend: site.baseurl }}"> <button class="btn btn-primary">Continue Lendo</button> </a></div> -->
+          
+          </div>
+
+      </div>
+    {% endfor %}
+    </div>
+    <hr class="m-5">
+  </div>
+
+  <div class="mb-5 text-center post-info">
+    <a href="/blog">confira outros posts<a>
+  </div>
   
+   <!-- <div class="other-post container mx-5">
+    <hr class="m-5">
+    <h4 class="post-info">sugestões</h4>
+    <div class="post-line"></div>
+  </div> -->
 </div>
+
+
