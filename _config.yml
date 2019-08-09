@@ -4,8 +4,11 @@ description: >-
   Apenas um jovem ciêntista à procura de respostas para as mais diversas questões.
 baseurl: ""
 url: "" 
-twitter_username: oraphaborges
-github_username:  oraphaborges
+
+twitter_url: "http://twitter.com/oraphaborges"
+github_url:  "http://www.github.com/oraphaborges"
+kaggle_url: "http://www.kaggle.com/oraphaborges"
+linkedin_url: "https://www.linkedin.com/in/raphael-borges-63a04591/"
 
 markdown: kramdown
 theme: minima

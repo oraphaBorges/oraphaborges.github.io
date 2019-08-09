@@ -6,4 +6,26 @@
 .footer-col{
     display: flex;
     flex-direction: column;
+    a{color: $light;}
+    a:hover{color:darken($light,15%);}
+}
+
+.footer-social-itens{
+    flex-direction: row;
+    letter-spacing: 10px;
+}
+.footer-info{
+    color: $light;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    
+}
+.footer-info-itens{
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+
 }

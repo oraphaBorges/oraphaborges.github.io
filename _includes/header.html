@@ -1,17 +1,20 @@
-<header class="header">
 <div id="menu">{% include menu.html %}</div>
-{% if page.dir == '/' %}
-    <section class="banner">
-        <div class="perfil"></div>
-        <div class="presentation">
-            <h1>Olá Seja Bem-vindo!</h1>
-            <h3>Meu nome é Raphael Borges. Sou desenvolvedor fullstack e Ciêntista. </h3>
-            <div id="social-itens" class="mt-1">
-                <a href="http://www.github.com/oraphaborges">github</a>
-                <a href="http://www.kaggle.com/oraphaborges">kaggle</a>
-            </div>
-        </div>
-    </section>
+<header class="header">
+    {% if page.dir == '/' %}
+        <section class="banner-home">
+            <section class="banner " >
+                <div class="perfil"></div>
+                <div class="presentation">
+                    <h1>Olá Seja Bem-vindo!</h1>
+                    <h3>Meu nome é Raphael Borges. Sou desenvolvedor fullstack e Ciêntista. </h3>
+                    <div id="social-itens" class="mt-2">
+                        <a class="social-item" title="Github" href="http://www.github.com/oraphaborges"><i class="fab fa-github"></i></a>
+                        <a class="social-item" title="Kaggle" href="http://www.kaggle.com/oraphaborges"><i class="fab fa-kaggle"></i></a>
+                        <a class="social-item" title="Linkedin" href="https://www.linkedin.com/in/raphael-borges-63a04591/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </section>
+        </section>
     {% else %}
         {% if page.layout != 'post' %}
             <div class="text-center post-info m-2">

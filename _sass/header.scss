@@ -2,14 +2,20 @@
 }
 .top-menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 15px 40px;
+    a{color: $dark;}
+    a:hover{color:lighten($dark,15%);}
 }
-.top-menu-link{
-    display: flex;
-    justify-content: space-between;
+.menu-link{
+    font-size: 12px;
+    margin-left: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
+.hidden{
+    display:none;
+}
 .banner{
     background-image: url('../img/bg.jpg');
     display: flex;
@@ -29,4 +35,9 @@
     h5{
         margin-bottom: 10px
     }
+}
+
+#social-itens{
+    font-size: 20px;
+    letter-spacing: 10px
 }
