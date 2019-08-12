@@ -10,13 +10,9 @@ paginate_path: "/blog/page:num/"
   <p>Aqui você encontra todos os artigos existentes neste site.</p>
   <h4 class="post-info"> ARTIgos</h4>
   <div class="post-line"></div>
-</div>
 {% for post in paginator.posts %}
 <div class="other-post container mx-5">
   
-  <div>
-
-    
     <div class="posts mb-3">
       <div class="mx-4">
         <!-- post img -->
@@ -58,10 +54,9 @@ paginate_path: "/blog/page:num/"
 
       </div>
     </div>
+    
+    {% endfor %}
     <hr class="m-5">
-  </div>
-
-{% endfor %}
 <div class="mb-5 text-center post-info">
 
 
