@@ -11,49 +11,47 @@ paginate_path: "/blog/page:num/"
   <h4 class="post-info"> ARTIgos</h4>
   <div class="post-line"></div>
 {% for post in paginator.posts %}
-<div class="other-post container mx-5">
-  
-    <div class="posts mb-3">
-      <div class="mx-4">
-        <!-- post img -->
-        {% if post.image != none %}
-        <div> <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
-          <img class="post-image" src="{{site.baseurl}}/assets/img/posts/{{post.image}}" alt="post-image">
-        </div></a>
-        {% endif %}
-      </div>
-      
-      <div>
-          <!-- author and date -->
-          <div class="post-meta"> 
-            <span class="post-author">{{ post.author }}</span>
-            <span class="post-date"> / {{ post.date | date_to_long_string }}</span>
-          </div>
-          
-        <!-- title -->
-        <div class="my-2">
-          <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+<div class="other-post container ">
+  <div class="posts mb-3">
+    <div class="mx-2">
+      <!-- post img -->
+      {% if post.image != none %}
+      <div> <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
+        <img class="post-image" src="{{site.baseurl}}/assets/img/posts/{{post.image}}" alt="post-image">
+      </div></a>
+      {% endif %}
+    </div>
+    
+    <div>
+        <!-- author and date -->
+        <div class="post-meta"> 
+          <span class="post-author">{{ post.author }}</span>
+          <span class="post-date"> / {{ post.date | date_to_long_string }}</span>
         </div>
         
-            <!-- text -->
-            <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
-            
-            <!-- categories -->
-            <div class="mt-1 mb-2">
-              {% assign categories = post.categories %}
-              {% for category in categories %}
-              <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
-              {% unless forloop.last %}&nbsp;{% endunless %}
-              {% endfor %}
-            </div>
-            
-            <!-- continue to read
-            <div><a href="{{ post.url | prepend: site.baseurl }}"> <button class="btn btn-primary">Continue Lendo</button> </a></div> -->
-          
-          </div>
-
+      <!-- title -->
+      <div class="my-2">
+        <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </div>
+      
+      <!-- text -->
+      <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+      
+      <!-- categories -->
+      <div class="mt-1 mb-2">
+        {% assign categories = post.categories %}
+        {% for category in categories %}
+        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+      </div>
+      
+      <!-- continue to read
+      <div><a href="{{ post.url | prepend: site.baseurl }}"> <button class="btn btn-primary">Continue Lendo</button> </a></div> -->
+    
     </div>
+  </div>
+</div>
     
     {% endfor %}
     <hr class="m-5">
