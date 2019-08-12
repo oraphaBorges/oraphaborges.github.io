@@ -8,8 +8,10 @@ paginate_path: "/page:num/"
   <!-- LAST POST -->
   {% assign last_post = site.posts.first %}
   <div class="last-post container">
-      <!-- author and date -->      
-      <div class="post-meta m-2"> 
+    <!-- author and date -->      
+    <div class="post-meta m-2"> 
+        <h4 class="post-info">útilmo ARTIgo</h4>
+        <div class="post-line"></div>
         <span class="post-author">{{ last_post.author }}</span>
         <span class="post-date"> / {{ last_post.date | date_to_long_string }}</span>
       </div>
@@ -24,7 +26,7 @@ paginate_path: "/page:num/"
       </div></a>
       {% endif %}
       <!-- text -->
-      <p class="mx-4">{% if last_post.description %}{{ last_post.description }}{% else %}{{ last_post.excerpt | strip_html }}{% endif %}</p>
+      <p class="mx-4 text-justify">{% if last_post.description %}{{ last_post.description }}{% else %}{{ last_post.excerpt | strip_html }}{% endif %}</p>
       <!-- categories -->
       <div class="mt-1 mb-2">
         {% assign categories = last_post.categories %}
@@ -72,7 +74,7 @@ paginate_path: "/page:num/"
     
             
             <!-- text -->
-            <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+            <p class="text-justify">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
             
             <!-- categories -->
             <div class="mt-1 mb-2">
