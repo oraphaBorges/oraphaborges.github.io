@@ -5,7 +5,7 @@ h2{font-size: $h2;}
 h3{font-size: $h3;}
 h4 {font-size: $h4;}
 h5{font-size: $h5;}
-hr{opacity: 0.2;}
+hr{opacity: 0.4;}
 
 a{
     color: $main-color;
@@ -52,7 +52,7 @@ p{
     letter-spacing: 2px
 }
 .post-date{
-    color:rgba($dark,0.3);
+    color:rgba($dark,0.5);
     text-transform: uppercase;
 }
 .post-line{
@@ -62,7 +62,7 @@ p{
     border-bottom: 1px solid $main-color;
 }
 .post-info{
-    color:rgba($dark,0.3);
+    color:rgba($dark,0.5);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
