@@ -55,12 +55,7 @@ p{
     color:rgba($dark,0.5);
     text-transform: uppercase;
 }
-.post-line{
-    width: 60px;
-    margin-top: 10px; 
-    margin-bottom: 30px; 
-    border-bottom: 1px solid $main-color;
-}
+
 .post-info{
     color:rgba($dark,0.5);
     text-transform: uppercase;
@@ -79,4 +74,18 @@ p{
 .text-justify{
     text-align: justify;
     text-justify: inter-word;
+}
+
+.citation{
+    .cite-author{
+        color: rgba($dark,0.4);
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-top: 15px;
+    }
+    .line{
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
 }

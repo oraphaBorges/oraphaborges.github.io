@@ -31,16 +31,17 @@
     align-items: center;
     color:$dark;
     h1{
-        margin: 20px;
+        font-weight: bold;
+        margin: 30px;
     }
     h5{
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 }
 
 #social-itens{
     font-size: 20px;
-    letter-spacing: 10px
+    letter-spacing: 10px;
 }
 
 @media (max-width: 480px) {

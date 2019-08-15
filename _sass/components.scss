@@ -28,3 +28,16 @@
       0px 0px 2px 14px transparentize($main-color, 0.7),
       0px 0px 1px 23px transparentize($main-color, 0.8),
   }
+
+  .line{
+    width: 60px;
+    margin-top: 10px; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid $main-color;
+}
+.ln-sm{
+    width: 30px;
+}
+.ln-center{
+    margin: auto;
+}
