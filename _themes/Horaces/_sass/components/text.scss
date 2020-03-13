@@ -1,0 +1,91 @@
+html{font-family: "Karla",sans-serif;}
+
+h1{font-size: $h1;}
+h2{font-size: $h2;}
+h3{font-size: $h3;}
+h4 {font-size: $h4;}
+h5{font-size: $h5;}
+hr{opacity: 0.4;}
+
+a{
+    color: $main-color;
+    text-decoration: none;
+    &:hover{
+        color: $main-color-dark;
+    }
+}
+
+p{
+    color: rgba($dark,0.8);
+    font-size: 18px;
+    margin: 0px 0px 25px;
+    line-height: 150%;
+}
+.posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+@media (max-width: 780px) {
+    .posts{
+        flex-direction: column;
+    }
+}
+
+.post-title{
+    color: $dark;
+    font-size: $h1;
+    font-weight: bolder;
+    &:hover{
+        color: $dark;
+    }
+}
+.post-image{
+    width: 100%;
+    margin: 0px 0px 25px;
+}
+
+.post-author{
+    color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 2px
+}
+.post-date{
+    color:rgba($dark,0.5);
+    text-transform: uppercase;
+}
+
+.post-info{
+    color:rgba($dark,0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.citation{
+    .cite-author{
+        color: rgba($dark,0.4);
+        font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-top: 15px;
+    }
+    .line{
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+}
