@@ -27,7 +27,6 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
-    jekyll-api (0.0.2)
     jekyll-feed (0.13.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-latex (1.0.0)
@@ -52,13 +51,8 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     msgpack (1.2.10)
-<<<<<<< HEAD
     multi_json (1.14.1)
     nokogiri (1.10.9)
-=======
-    multi_json (1.13.1)
-    nokogiri (1.10.8)
->>>>>>> fe861016c61352e71f37a5357a2c14f23341ce75
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -93,7 +87,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.6)
-  jekyll-api
   jekyll-feed (~> 0.6)
   jekyll-latex
   jekyll-paginate
