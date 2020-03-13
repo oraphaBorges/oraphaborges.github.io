@@ -1,19 +1,9 @@
 @import "components/text";
 @import "components/buttons";
-@import "components/spacing";
+@import "components/bloco";
+// @import "components/spacing";
+@import "components/backgrounds";
 
-.bg-dark{
-    background-color: $dark;
-    color: $light;
-}
-.bg-light{
-    background-color: $light;
-    color: $dark;
-}
-.bg-white{
-    background-color: $white;
-    color: $dark;
-}
 
 .perfil {
     width: 150px;
