@@ -1,0 +1,10 @@
+.bloco{
+    margin-top: -50px;
+    $radius:8px;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    
+    -webkit-box-shadow: 0px -9px 15px -8px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px -9px 15px -8px rgba(0,0,0,0.47);
+    box-shadow: 0px -9px 15px -8px rgba(0,0,0,0.47);
+}
