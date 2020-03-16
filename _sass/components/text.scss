@@ -50,6 +50,14 @@ p{
         color: $dark;
     }
 }
+.post-title-color{
+    color: $main-color-dark;
+    font-weight: 100;
+    text-transform: lowercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
 .post-image{
     width: 100%;
     margin: 0px 0px 25px;
