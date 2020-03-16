@@ -16,28 +16,22 @@ plugins:
   - jekyll-feed
   - jekyll-latex
   - jekyll-paginate
-  - jekyll-paginate-multiple
 
-paginate_multiple:
-  - paginate: 10
-    paginate_path: 'blog/page:num/'
-    sub_dir: '/blog'
-  - paginate: 10
-    paginate_path: 'projetos/page:num/'
-    sub_dir: '/projetos'
-  - paginate: 10
-    paginate_path: 'palestras/page:num/'
-    sub_dir: '/palestras'
-  - paginate: 10
-    paginate_path: 'artigos/page:num/'
-    sub_dir: '/artigos'
+paginate: 5
+paginate_path: /blog/page:num/
 
 sass:
   sass_dir: _sass
   style: compressed
 
 navigation:
- - title: Home
-   url: /
- - title: Contato
-   url: /contato
+  - title: Home
+    url: /
+  - title: projetos
+    url: /projetos
+  - title: artigos
+    url: /artigos
+  - title: palestras
+    url: /palestras
+  - title: Contato
+    url: /contato
