@@ -2,3 +2,47 @@
 layout: default
 paginate_path: "/page:num/"
 ---
+<section class="row mx-auto">
+<div class='p-5 col-sm-12 col-md-4'>
+    <h2>title</h2>
+    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+</div>
+<div class='p-5 col-sm-12 col-md-4'>
+    <h2>title</h2>
+    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+</div>
+<div class='p-5 col-sm-12 col-md-4'>
+    <h2>title</h2>
+    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+</div>
+</section>
+
+
+<h3 class="post-title-color text-center pt-5"> skills </h3>
+<section class="skills row mx-auto text-center">
+<img class="skill-item" src="" alt="skill-1">
+<img class="skill-item" src="" alt="skill-2">
+<img class="skill-item" src="" alt="skill-3">
+<img class="skill-item" src="" alt="skill-4">
+<img class="skill-item" src="" alt="skill-5">
+<img class="skill-item" src="" alt="skill-6">
+<img class="skill-item" src="" alt="skill-7">
+<img class="skill-item" src="" alt="skill-8">
+</section>
+
+<h3 class="post-title-color text-center pt-5"> blog </h3>
+<section class="row pt-4">
+{% for post in site.posts limit:4%}
+    <article class='col-sm-12 col-md-6 col-lg-3 mx-auto'>
+    <div class="container mt-2">
+        <div class="card card-block mb-2">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <h2  class="card-title">{{post.title}}</h2>
+            </a>
+            <p   class="text-justify">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+        </div>
+    </div>
+    </article>
+{%endfor%}
+</section>
+<a href='blog'><h3 class="text-center">veja outros posts</h3></a>
