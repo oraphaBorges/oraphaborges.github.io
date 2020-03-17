@@ -31,3 +31,20 @@
 .ln-center{
     margin: auto;
 }
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    .skill-item{
+        margin: 10px;
+        max-width: 100%;
+        height: 45px;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+    .skill-item:hover{
+        -webkit-filter: none; /* Safari 6.0 - 9.0 */
+        filter:none;
+    }
+}
