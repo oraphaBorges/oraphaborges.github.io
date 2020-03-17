@@ -3,11 +3,14 @@ $light:  #f2f2f2;
 $white: #fff;
 $black: #000;
 
-$main-color: #9754f2;
-$main-color-dark:   darken($main-color,15%);
-$main-color-light: lighten($main-color,15%);
+$main-color: #8040bf;
+$main-color-dark:   #663399;
+$main-color-light: #8c53c6;
 
 $LGBTQIA-color: linear-gradient(to right,#FE0000,#FE6300,#FFF001,#008001,#4600FF,#830189);
 
 // Foont sizes values
-$h1: 36px; $h2: 24px; $h3: 18px; $h4: 14px; $h5: 12px;
+$h1: 28px; $h2: 24px; $h3: 18px; $h4: 14px; $h5: 12px;
+
+// text color
+$text-light:lighten($dark,30%);
