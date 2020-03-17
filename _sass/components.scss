@@ -3,6 +3,7 @@
 @import "components/bloco";
 @import "components/backgrounds";
 @import "components/card";
+@import "components/posts";
 
 
 .perfil {
@@ -35,8 +36,10 @@
 .skills{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     height: 100%;
     .skill-item{
+        transition: 0.3s;
         margin: 10px;
         max-width: 100%;
         height: 45px;
@@ -44,6 +47,7 @@
         filter: grayscale(100%);
     }
     .skill-item:hover{
+        transition: 0.3s;
         -webkit-filter: none; /* Safari 6.0 - 9.0 */
         filter:none;
     }
