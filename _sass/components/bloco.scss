@@ -8,3 +8,28 @@
     -moz-box-shadow: 0px -9px 15px -8px rgba(0,0,0,0.47);
     box-shadow: 0px -9px 15px -8px rgba(0,0,0,0.47);
 }
+
+.bloc{
+    display: flex;
+    flex-direction: column;
+    .bloc-header{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .bloc-subtitle{
+            i{
+                font-size: $h2;
+                color: $main-color;
+            }        
+            color: $text-light;
+        }
+        .bloc-title{
+            padding-top: 20px;
+            padding-left: 20px;
+            h1{
+                font-size: 36px;
+                font-weight: bolder;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
