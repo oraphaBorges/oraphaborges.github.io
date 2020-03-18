@@ -64,3 +64,21 @@
     }
  }
 }
+@media (max-width: 768px) {
+    .blog{
+     .posts{
+        .post{
+            max-width: 69%;      
+            }
+        }
+    }
+}
+@media (max-width: 468px) {
+    .blog{
+     .posts{
+        .post{
+            max-width: 88%;      
+            }
+        }
+    }
+}
