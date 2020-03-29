@@ -2,19 +2,19 @@
 layout: default
 paginate_path: "/page:num/"
 ---
-<section class="row mx-auto">
-<div class='p-5 col-sm-12 col-md-4'>
-    <h2>title</h2>
-    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
-</div>
-<div class='p-5 col-sm-12 col-md-4'>
-    <h2>title</h2>
-    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-</div>
-<div class='p-5 col-sm-12 col-md-4'>
-    <h2>title</h2>
-    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-</div>
+<section class="row mx-auto text-justify">
+    <div class='p-3 col-sm-12 col-md-4'>
+        <h2>title</h2>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+    </div>
+    <div class='p-3 col-sm-12 col-md-4'>
+        <h2>title</h2>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+    </div>
+    <div class='p-3 col-sm-12 col-md-4'>
+        <h2>title</h2>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+    </div>
 </section>
 
 
@@ -41,7 +41,7 @@ paginate_path: "/page:num/"
         </div>
     </header>
     <div class="posts">
-    {% for post in site.posts limit:4%}
+    {% for post in site.posts limit:6%}
         <article class="post" >
             <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
                 <h1>{{post.title}}<h1>
@@ -59,4 +59,3 @@ paginate_path: "/page:num/"
     </div>
     
 </section>
-
